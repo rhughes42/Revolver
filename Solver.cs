@@ -141,6 +141,7 @@ namespace Revolver
                 {
                     Individual[] parents = Select(2, population, tau); // Pick 2 good (not necessarily best) Individuals.
                     Individual[] children = Reproduce(parents[0], parents[1], minX, maxX, mutateRate, mutateChange, fitness); // Create 2 children.
+
                     Place(children[0], children[1], population); // Sort pop, replace two worst with new children.
                     Immigrate(population, this.GenomeCount, minX, maxX, mutateRate, mutateChange, fitness); // Bring in a random Individual.
 
