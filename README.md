@@ -23,8 +23,11 @@ With arbitrary minimization problems, the target function to be minimized is usu
 An evolutionary optimization algorithm is an implementation of a meta-heuristic modeled on the behavior of biological evolution.
 These algorithms can be used to find approximate solutions to difficult or impossible numerical minimization problems.
 
-### The Evolve method.
+### Evolve
 The Evolve method begins by initializing the best fitness and best chromosomes to the first ones in the population. The method iterates exactly maxGenerations times, using gen (generation) as a loop counter. One of several alternatives is to stop when no improvement has occurred after some number of iterations. The Select method returns two good, but not necessarily best, individuals from the population. These two parents are passed to Reproduce, which creates and returns two children. The Accept method places the two children into the population, replacing two existing individuals. The Immigrate method generates a new random individual and places it into the population. The new population is then scanned to see if any of the three new individuals in the population is a new best solution.
+
+### Select
+The Select method uses a technique called tournament selection. A subset of random candidate individuals is generated and the best n of them are returned. The number of candidates is computed into variable tournSize, which is some fraction, tau, of the total population size. Larger values of tau increase the probability that the best two individuals will be selected.
 
 ### References
 Demonstration code and description text in this repo is taken from: https://docs.microsoft.com/en-us/archive/msdn-magazine/2012/june/test-run-evolutionary-optimization-algorithms
