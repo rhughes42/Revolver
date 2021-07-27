@@ -16,6 +16,9 @@ Output the best performing set of genomes and their resulting fitness value.
 The mutation rate value controls how many genes in the chromosome will be modified.
 One heuristic for the value of the mutateRate field is to use 1.0 / numGenes, so that on average one gene in the chromosome will be mutated every time Mutate is called.
 
+### Fitness values vs. cost functions.
+With arbitrary minimization problems, the target function to be minimized is usually called a cost function. In the context of evolutionary and genetic algorithms, however, the function is usually called a fitness function. Notice the terminology is a bit awkward because lower values of fitness are better than higher values. In this example, the fitness function is completely self-contained. In many optimization problems, the fitness function requires additional input parameters, such as a matrix of data or a reference to an external data file.
+
 ### What is evolutionary optimization?
 An evolutionary optimization algorithm is an implementation of a meta-heuristic modeled on the behavior of biological evolution.
 These algorithms can be used to find approximate solutions to difficult or impossible numerical minimization problems.
