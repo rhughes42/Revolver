@@ -1,7 +1,7 @@
 # Revolver
 Synchronous evolutionary solver for Rhino Compute.
 
-## Pseudocode Sketch
+## Pseudocode
 ```
 Connect our input genes (parameters) to the main solver component.
 Find the min, max and step size (precision) for each genome and the mutation rate for our algorithm.
@@ -12,7 +12,7 @@ Run the algorithm in a loop until we satisfy our fitness criteria within a speci
 Output the best performing set of genomes and their resulting fitness value.
 ```
 
-### Choosing a Mutation Value
+### Choosing a mutation value
 The mutation rate value controls how many genes in the chromosome will be modified.
 One heuristic for the value of the mutateRate field is to use 1.0 / numGenes, so that on average one gene in the chromosome will be mutated every time Mutate is called.
 
